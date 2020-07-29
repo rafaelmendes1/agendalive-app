@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './views/home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,10 +20,7 @@ import { LiveFormDialogComponent } from './views/home/live-form-dialog/live-form
 import {MatInputModule} from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
-
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -40,6 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    FlexLayoutModule,
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
@@ -48,7 +47,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatNativeDateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule
   ],
   providers: [
     LocalDateTimePipe
