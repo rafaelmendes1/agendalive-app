@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LiveService } from 'src/app/shared/service/live.service';
 import { Live } from 'src/app/shared/model/live.model';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
