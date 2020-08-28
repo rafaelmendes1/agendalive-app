@@ -1,7 +1,13 @@
 .example-icon {
     padding: 0 14px;
-  }
-  .example-spacer {
+}
+
+.example-spacer {
     flex: 1 1 auto;
-  }
-  
+}
+
+.gradient {
+  border-width: 0 0 8px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff) 3;
+}

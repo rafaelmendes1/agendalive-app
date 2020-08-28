@@ -25,19 +25,21 @@ export class LiveListComponent implements OnInit {
   }
 
   getLives(){
-    this.liveService.getLivesWithFlag('previous').subscribe(data => {
-      this.livesPrevious = data.content;
-      console.log();
-      this.livesPrevious.forEach(live => {
-        live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
-      });
-    });
-
     this.liveService.getLivesWithFlag('next').subscribe(data => {
       this.livesNext = data.content;
-      console.log();
+      console.log(this.livesNext)
       this.livesNext.forEach(live => {
         live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
+      });
+      console.log(this.livesNext)
+    });
+
+    this.liveService.getLivesWithFlag('previous').subscribe(data => {
+      this.livesPrevious = data.content;
+      console.log(this.livesPrevious)
+      this.livesPrevious.forEach(live => {
+        live.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(live.liveLink);
+        console.log(this.livesPrevious)
       });
     });
   }
